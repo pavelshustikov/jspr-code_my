@@ -21,6 +21,9 @@ public class Main {
           // read only request line for simplicity
           // must be in form GET /path HTTP/1.1
           final var requestLine = in.readLine();
+          if (requestLine != null){
+            System.out.println("requestLine: " + requestLine);
+            }
           final var parts = requestLine.split(" ");
 
           if (parts.length != 3) {
